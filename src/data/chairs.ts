@@ -1,4 +1,7 @@
 import { Chair, Review } from '../types';
+import chairOneImage from '../assets/images/chair_one_1793035868422.jpg';
+import chairFlowImage from '../assets/images/chair_flow_1793035868573.jpg';
+import chairAtelierImage from '../assets/images/chair_atelier_1793035868944.jpg';
 
 export const CHAIRS: Chair[] = [
   {
@@ -8,7 +11,7 @@ export const CHAIRS: Chair[] = [
     tagline: 'Precision engineered for 10+ hours of continuous focused work.',
     price: 640,
     originalPrice: 720,
-    image: '/src/assets/images/chair_one_1793035868422.jpg',
+    image: chairOneImage,
     category: 'task',
     categoryLabel: 'Task Ergonomics',
     colors: [
@@ -47,7 +50,7 @@ export const CHAIRS: Chair[] = [
     tagline: 'Lightweight architectural form with intuitive active posture response.',
     price: 520,
     originalPrice: 590,
-    image: '/src/assets/images/chair_flow_1793035868573.jpg',
+    image: chairFlowImage,
     category: 'active',
     categoryLabel: 'Active Seating',
     colors: [
@@ -85,7 +88,7 @@ export const CHAIRS: Chair[] = [
     tagline: 'Pure material luxury paired with quiet ergonomic discretion.',
     price: 890,
     originalPrice: 990,
-    image: '/src/assets/images/chair_atelier_1793035868944.jpg',
+    image: chairAtelierImage,
     category: 'executive',
     categoryLabel: 'Executive & Lounge',
     colors: [

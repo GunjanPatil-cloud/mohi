@@ -1,4 +1,5 @@
 import React from 'react';
+import heroImage from '../assets/images/hero_chair_1793035852831.jpg';
 import { ArrowRight, Sparkles, Check } from 'lucide-react';
 
 interface HeroProps {
@@ -74,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenFinder }) => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-2xl overflow-hidden bg-zinc-100 border border-zinc-200 shadow-sm aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] group">
               <img
-                src="/src/assets/images/hero_chair_1793035852831.jpg"
+                src={heroImage}
                 alt="Nexlivo ergonomic office task chair in a tranquil Scandinavian minimalist architectural studio"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-102"
