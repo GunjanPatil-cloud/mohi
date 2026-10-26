@@ -42,7 +42,7 @@ export const ComparisonMatrix: React.FC<ComparisonMatrixProps> = ({
                     {chair.subtitle}
                   </div>
                   <div className="mt-2 text-base font-bold font-mono tabular-nums text-zinc-900">
-                    ${chair.price}
+                    ₹{chair.price}
                   </div>
                 </th>
               ))}

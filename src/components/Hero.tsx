@@ -85,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenFinder }) => {
               <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-white/95 backdrop-blur-md p-4 rounded-xl border border-zinc-200/90 shadow-md">
                 <div className="flex items-center justify-between text-xs text-zinc-500 mb-1">
                   <span className="font-medium text-zinc-900">Nexlivo One</span>
-                  <span className="font-mono tabular-nums text-zinc-700 font-semibold">$640</span>
+                  <span className="font-mono tabular-nums text-zinc-700 font-semibold">₹640</span>
                 </div>
                 <p className="text-xs text-zinc-600 leading-snug">
                   Shown in Obsidian with brushed aluminum star base.

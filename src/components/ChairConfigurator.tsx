@@ -143,7 +143,7 @@ export const ChairConfigurator: React.FC<ChairConfiguratorProps> = ({
                   >
                     <span className="block truncate">{chair.name.replace('Nexlivo ', '')}</span>
                     <span className="font-mono tabular-nums text-[11px] block mt-0.5 opacity-80">
-                      ${chair.price}
+                      ₹{chair.price}
                     </span>
                   </button>
                 ))}
@@ -202,7 +202,7 @@ export const ChairConfigurator: React.FC<ChairConfiguratorProps> = ({
                   >
                     <span>{item.name}</span>
                     <span className="font-mono tabular-nums text-zinc-400">
-                      {item.price === 0 ? 'Included' : `+$${item.price}`}
+                      {item.price === 0 ? 'Included' : `+₹${item.price}`}
                     </span>
                   </button>
                 ))}
@@ -273,7 +273,7 @@ export const ChairConfigurator: React.FC<ChairConfiguratorProps> = ({
                     </span>
                   </div>
                 </div>
-                <span className="font-mono tabular-nums text-xs text-zinc-400">+$49</span>
+                <span className="font-mono tabular-nums text-xs text-zinc-400">+₹49</span>
               </div>
             </div>
 
@@ -284,7 +284,7 @@ export const ChairConfigurator: React.FC<ChairConfiguratorProps> = ({
                   Configured Total
                 </span>
                 <span className="font-mono tabular-nums text-2xl font-bold text-white">
-                  ${totalPrice}
+                  ₹{totalPrice}
                 </span>
               </div>
 
