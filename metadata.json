@@ -1,0 +1,6 @@
+{
+  "name": "Nexlivo Chairs - Minimalist Ergonomic Seating",
+  "description": "Engineered for effortless posture and calm focus. Clean, quiet ergonomic chairs designed with architectural simplicity.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
