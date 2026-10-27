@@ -28,7 +28,7 @@ export const ChairConfigurator: React.FC<ChairConfiguratorProps> = ({
   // Recalculate price
   const basePrice = currentChair.price;
   const finishPrice = frameFinish.price;
-  const headrestPrice = hasHeadrest ? 49 : 0;
+  const headrestPrice = hasHeadrest ? 4165 : 0;
   const totalPrice = basePrice + finishPrice + headrestPrice;
 
   // Posture label based on angle
@@ -143,7 +143,7 @@ export const ChairConfigurator: React.FC<ChairConfiguratorProps> = ({
                   >
                     <span className="block truncate">{chair.name.replace('Nexlivo ', '')}</span>
                     <span className="font-mono tabular-nums text-[11px] block mt-0.5 opacity-80">
-                      ₹{chair.price}
+                      ₹{chair.price.toLocaleString('en-IN')}
                     </span>
                   </button>
                 ))}
@@ -188,8 +188,8 @@ export const ChairConfigurator: React.FC<ChairConfiguratorProps> = ({
               <div className="space-y-2">
                 {[
                   { name: 'Brushed Silver Aluminum', price: 0 },
-                  { name: 'Matte Obsidian Anodized', price: 35 },
-                  { name: 'Polished Mirror Chrome', price: 60 },
+                  { name: 'Matte Obsidian Anodized', price: 2975 },
+                  { name: 'Polished Mirror Chrome', price: 5100 },
                 ].map((item) => (
                   <button
                     key={item.name}
@@ -202,7 +202,7 @@ export const ChairConfigurator: React.FC<ChairConfiguratorProps> = ({
                   >
                     <span>{item.name}</span>
                     <span className="font-mono tabular-nums text-zinc-400">
-                      {item.price === 0 ? 'Included' : `+₹${item.price}`}
+                      {item.price === 0 ? 'Included' : `+₹${item.price.toLocaleString('en-IN')}`}
                     </span>
                   </button>
                 ))}
@@ -273,7 +273,7 @@ export const ChairConfigurator: React.FC<ChairConfiguratorProps> = ({
                     </span>
                   </div>
                 </div>
-                <span className="font-mono tabular-nums text-xs text-zinc-400">+₹49</span>
+                <span className="font-mono tabular-nums text-xs text-zinc-400">+₹4,165</span>
               </div>
             </div>
 
@@ -284,7 +284,7 @@ export const ChairConfigurator: React.FC<ChairConfiguratorProps> = ({
                   Configured Total
                 </span>
                 <span className="font-mono tabular-nums text-2xl font-bold text-white">
-                  ₹{totalPrice}
+                  ₹{totalPrice.toLocaleString('en-IN')}
                 </span>
               </div>
 

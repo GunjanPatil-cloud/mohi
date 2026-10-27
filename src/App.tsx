@@ -14,6 +14,7 @@ import { QuickViewModal } from './components/QuickViewModal';
 import { ChairFinderModal } from './components/ChairFinderModal';
 import { CartDrawer } from './components/CartDrawer';
 import { CheckoutModal } from './components/CheckoutModal';
+import { CourseModules } from './components/CourseModules';
 import { Check } from 'lucide-react';
 
 export default function App() {
@@ -138,7 +139,28 @@ export default function App() {
 
       <main className="flex-1">
         {/* 3. Hero Section */}
-        <Hero onOpenFinder={() => setIsFinderOpen(true)} />
+        <div id="home">
+          <Hero onOpenFinder={() => setIsFinderOpen(true)} />
+        </div>
+
+        {/* 4. Course Modules (Sustainability to Final Project) */}
+        <div className="border-t border-zinc-100 bg-gradient-to-b from-zinc-50/50 to-white">
+          <div className="max-w-7xl mx-auto px-6 py-8">
+            <div className="text-center space-y-2 mb-2">
+              <div className="text-xs font-bold uppercase tracking-widest text-zinc-400">Curriculum</div>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950 font-display">
+                Sustainable Scaling Program
+              </h2>
+              <p className="text-sm text-zinc-500 max-w-2xl mx-auto">
+                A comprehensive 8-module journey from startup sustainability audit to a full investor-ready scaling strategy.
+              </p>
+            </div>
+          </div>
+          <CourseModules />
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-zinc-200" />
 
         {/* 4. Curated Chairs Collection */}
         <ChairCatalog

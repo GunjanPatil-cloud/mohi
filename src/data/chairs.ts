@@ -1,7 +1,4 @@
 import { Chair, Review } from '../types';
-import chairOneImage from '../assets/images/chair_one_1793035868422.jpg';
-import chairFlowImage from '../assets/images/chair_flow_1793035868573.jpg';
-import chairAtelierImage from '../assets/images/chair_atelier_1793035868944.jpg';
 
 export const CHAIRS: Chair[] = [
   {
@@ -9,9 +6,9 @@ export const CHAIRS: Chair[] = [
     name: 'Nexlivo One',
     subtitle: 'Signature Ergonomic Task Chair',
     tagline: 'Precision engineered for 10+ hours of continuous focused work.',
-    price: 640,
-    originalPrice: 720,
-    image: chairOneImage,
+    price: 54400,
+    originalPrice: 61200,
+    image: '/src/assets/images/chair_one_1793035868422.jpg',
     category: 'task',
     categoryLabel: 'Task Ergonomics',
     colors: [
@@ -48,9 +45,9 @@ export const CHAIRS: Chair[] = [
     name: 'Nexlivo Flow',
     subtitle: 'Active Posture & Lumbar Task Chair',
     tagline: 'Lightweight architectural form with intuitive active posture response.',
-    price: 520,
-    originalPrice: 590,
-    image: chairFlowImage,
+    price: 44200,
+    originalPrice: 50150,
+    image: '/src/assets/images/chair_flow_1793035868573.jpg',
     category: 'active',
     categoryLabel: 'Active Seating',
     colors: [
@@ -86,9 +83,9 @@ export const CHAIRS: Chair[] = [
     name: 'Nexlivo Atelier',
     subtitle: 'Executive Italian Leather & Walnut Swivel Chair',
     tagline: 'Pure material luxury paired with quiet ergonomic discretion.',
-    price: 890,
-    originalPrice: 990,
-    image: chairAtelierImage,
+    price: 75650,
+    originalPrice: 84150,
+    image: '/src/assets/images/chair_atelier_1793035868944.jpg',
     category: 'executive',
     categoryLabel: 'Executive & Lounge',
     colors: [

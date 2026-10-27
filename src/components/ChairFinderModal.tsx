@@ -234,7 +234,7 @@ export const ChairFinderModal: React.FC<ChairFinderModalProps> = ({
                     {recommendation.chair.name}
                   </h4>
                   <div className="font-mono tabular-nums text-sm font-semibold text-zinc-900 mb-1">
-                    ₹{recommendation.chair.price}
+                    ₹{recommendation.chair.price.toLocaleString('en-IN')}
                   </div>
                   <p className="text-xs text-zinc-600 leading-relaxed">
                     {recommendation.reason}
@@ -252,7 +252,7 @@ export const ChairFinderModal: React.FC<ChairFinderModalProps> = ({
                   className="w-full py-3 bg-zinc-900 text-white font-semibold text-xs rounded-xl hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                 >
                   <Check className="w-4 h-4" />
-                  <span>Add Recommended Chair to Bag (₹{recommendation.chair.price})</span>
+                  <span>Add Recommended Chair to Bag (₹{recommendation.chair.price.toLocaleString('en-IN')})</span>
                 </button>
 
                 <div className="flex gap-2">

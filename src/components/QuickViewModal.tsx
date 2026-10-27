@@ -74,11 +74,11 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
 
                 <div className="mt-3 flex items-baseline gap-3">
                   <span className="font-mono tabular-nums text-2xl font-bold text-zinc-900">
-                    ₹{chair.price}
+                    ₹{chair.price.toLocaleString('en-IN')}
                   </span>
                   {chair.originalPrice && (
                     <span className="font-mono tabular-nums text-sm text-zinc-400 line-through">
-                      ₹{chair.originalPrice}
+                      ₹{chair.originalPrice.toLocaleString('en-IN')}
                     </span>
                   )}
                   <span className="text-xs text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-medium">
@@ -151,7 +151,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
                       <span>Added to Bag</span>
                     </>
                   ) : (
-                    <span>Add to Bag (₹{chair.price * quantity})</span>
+                    <span>Add to Bag (₹{(chair.price * quantity).toLocaleString('en-IN')})</span>
                   )}
                 </button>
               </div>

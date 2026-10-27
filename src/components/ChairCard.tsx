@@ -100,11 +100,11 @@ export const ChairCard: React.FC<ChairCardProps> = ({ chair, onQuickView, onAddT
           <div className="flex items-center gap-3">
             <div className="text-right">
               <span className="font-mono tabular-nums text-base font-bold text-zinc-900">
-                ₹{chair.price}
+                ₹{chair.price.toLocaleString('en-IN')}
               </span>
               {chair.originalPrice && (
                 <span className="block font-mono tabular-nums text-xs text-zinc-400 line-through">
-                  ₹{chair.originalPrice}
+                  ₹{chair.originalPrice.toLocaleString('en-IN')}
                 </span>
               )}
             </div>
