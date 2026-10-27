@@ -1,4 +1,5 @@
 import React from 'react';
+import heroImage from '../assets/images/hero_chair_1793035852831.jpg';
 import { ArrowRight, Sparkles, Check } from 'lucide-react';
 
 interface HeroProps {
@@ -74,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenFinder }) => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-2xl overflow-hidden bg-zinc-100 border border-zinc-200 shadow-sm aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] group">
               <img
-                src="/src/assets/images/hero_chair_1793035852831.jpg"
+                src={heroImage}
                 alt="Nexlivo ergonomic office task chair in a tranquil Scandinavian minimalist architectural studio"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-102"
@@ -84,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenFinder }) => {
               <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-white/95 backdrop-blur-md p-4 rounded-xl border border-zinc-200/90 shadow-md">
                 <div className="flex items-center justify-between text-xs text-zinc-500 mb-1">
                   <span className="font-medium text-zinc-900">Nexlivo One</span>
-                  <span className="font-mono tabular-nums text-zinc-700 font-semibold">$640</span>
+                  <span className="font-mono tabular-nums text-zinc-700 font-semibold">₹640</span>
                 </div>
                 <p className="text-xs text-zinc-600 leading-snug">
                   Shown in Obsidian with brushed aluminum star base.

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CartItem, OrderConfirmation } from '../types';
-import { X, CheckCircle, ShieldCheck, Truck, Lock, CreditCard, DollarSign } from 'lucide-react';
+import { X, CheckCircle, ShieldCheck, Truck, Lock, CreditCard, IndianRupee } from 'lucide-react';
 
 interface CheckoutModalProps {
   isOpen: boolean;
@@ -132,7 +132,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                         {it.quantity}x {it.name} ({it.selectedColor})
                       </span>
                       <span className="font-mono tabular-nums font-medium text-zinc-900">
-                        ${it.price * it.quantity}
+                        ₹{it.price * it.quantity}
                       </span>
                     </div>
                   ))}
@@ -154,7 +154,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   <div className="flex justify-between text-sm font-bold text-zinc-900 pt-2 border-t border-zinc-200">
                     <span>Total Paid:</span>
                     <span className="font-mono tabular-nums font-bold">
-                      ${confirmedOrder.total}
+                      ₹{confirmedOrder.total}
                     </span>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                 <div>
                   <span className="text-zinc-500">Total Due Today: </span>
                   <span className="font-mono tabular-nums font-bold text-zinc-950 text-base">
-                    ${total}
+                    ₹{total}
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 text-emerald-700 font-medium">
@@ -289,7 +289,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                         : 'border-zinc-200 bg-zinc-50 text-zinc-700 hover:border-zinc-300'
                     }`}
                   >
-                    <DollarSign className="w-4 h-4" />
+                    <IndianRupee className="w-4 h-4" />
                     <span>Pay Upon Delivery</span>
                   </button>
                 </div>
@@ -329,7 +329,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                 {isSubmitting ? (
                   <span>Securing Order...</span>
                 ) : (
-                  <span>Place Order (${total})</span>
+                  <span>Place Order (₹{total})</span>
                 )}
               </button>
             </form>

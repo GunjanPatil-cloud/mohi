@@ -1,4 +1,5 @@
 import React from 'react';
+import craftImage from '../assets/images/chair_craft_1793035869710.jpg';
 import { ShieldCheck, Cpu, RefreshCw, Feather } from 'lucide-react';
 
 export const CraftsmanshipSection: React.FC = () => {
@@ -51,7 +52,7 @@ export const CraftsmanshipSection: React.FC = () => {
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-2xl overflow-hidden bg-zinc-100 border border-zinc-200 shadow-sm aspect-[16/10] group">
               <img
-                src="/src/assets/images/chair_craft_1793035869710.jpg"
+                src={craftImage}
                 alt="Close-up detail of Nexlivo knurled aluminum tension adjustment dial and precision synchronous mechanism"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-102"

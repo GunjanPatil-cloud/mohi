@@ -137,7 +137,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                     </div>
 
                     <span className="font-mono tabular-nums text-xs font-bold text-zinc-950">
-                      ${item.price * item.quantity}
+                      ₹{item.price * item.quantity}
                     </span>
                   </div>
                 </div>
@@ -174,22 +174,22 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               <div className="flex justify-between">
                 <span>Subtotal</span>
                 <span className="font-mono tabular-nums text-zinc-900 font-medium">
-                  ${subtotal}
+                  ₹{subtotal}
                 </span>
               </div>
               {discountAmount > 0 && (
                 <div className="flex justify-between text-emerald-700">
                   <span>Discount ({promoDiscountPercent}%)</span>
-                  <span className="font-mono tabular-nums">-${discountAmount}</span>
+                  <span className="font-mono tabular-nums">-₹{discountAmount}</span>
                 </div>
               )}
               <div className="flex justify-between">
                 <span>White-Glove Delivery</span>
-                <span className="text-emerald-700 font-medium">Free ($0)</span>
+                <span className="text-emerald-700 font-medium">Free (₹0)</span>
               </div>
               <div className="pt-2 border-t border-zinc-100 flex justify-between text-sm font-bold text-zinc-950">
                 <span>Total</span>
-                <span className="font-mono tabular-nums">${total}</span>
+                <span className="font-mono tabular-nums">₹{total}</span>
               </div>
             </div>
 
