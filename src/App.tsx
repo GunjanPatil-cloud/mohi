@@ -4,6 +4,7 @@ import { Chair, CartItem, OrderConfirmation } from './types';
 import { AnnouncementBar } from './components/AnnouncementBar';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { CourseModules } from './components/CourseModules';
 import { ChairCatalog } from './components/ChairCatalog';
 import { ChairConfigurator } from './components/ChairConfigurator';
 import { CraftsmanshipSection } from './components/CraftsmanshipSection';
@@ -14,7 +15,6 @@ import { QuickViewModal } from './components/QuickViewModal';
 import { ChairFinderModal } from './components/ChairFinderModal';
 import { CartDrawer } from './components/CartDrawer';
 import { CheckoutModal } from './components/CheckoutModal';
-import { CourseModules } from './components/CourseModules';
 import { Check } from 'lucide-react';
 
 export default function App() {
@@ -108,9 +108,9 @@ export default function App() {
   };
 
   const handleApplyPromo = (code: string) => {
-    if (code.toUpperCase() === 'COMFORT10') {
+    if (code.toUpperCase() === 'COMFORT10' || code.toUpperCase() === 'SUSTAINABLE10') {
       setPromoDiscountPercent(10);
-      showToast('10% discount applied to your order');
+      showToast('10% sustainability scaling discount applied');
       return true;
     }
     return false;
@@ -126,11 +126,11 @@ export default function App() {
   const finalTotal = subtotal - discountAmount;
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fbfbfb] text-zinc-900 selection:bg-zinc-900 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#F7F8F3] text-[#18231D] selection:bg-[#218653] selection:text-white">
       {/* 1. Announcement Bar */}
       <AnnouncementBar />
 
-      {/* 2. Top Bar (Top Bar Contract: wordmark, 4 nav links, bag button) */}
+      {/* 2. Top Bar with Direct Navigations: Home, Sustainability, Business Model, etc. */}
       <Navbar
         cartCount={cartCount}
         onOpenCart={() => setIsCartOpen(true)}
@@ -138,20 +138,20 @@ export default function App() {
       />
 
       <main className="flex-1">
-        {/* 3. Hero Section */}
-        <div id="home">
-          <Hero onOpenFinder={() => setIsFinderOpen(true)} />
-        </div>
+        {/* 3. Hero Section matching layout reference */}
+        <Hero onOpenFinder={() => setIsFinderOpen(true)} />
 
-        {/* 4. Course Modules (Sustainability to Final Project) */}
-        <div className="border-t border-zinc-100 bg-gradient-to-b from-zinc-50/50 to-white">
-          <div className="max-w-7xl mx-auto px-6 py-8">
-            <div className="text-center space-y-2 mb-2">
-              <div className="text-xs font-bold uppercase tracking-widest text-zinc-400">Curriculum</div>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950 font-display">
+        {/* 4. Course Modules (Sustainability Audit through Final Project) */}
+        <div className="bg-white border-b border-[#E2E8F0]">
+          <div className="max-w-7xl mx-auto px-6 pt-16 pb-4">
+            <div className="text-center space-y-2 mb-4">
+              <div className="badge-pill mb-2">
+                <span>Program Curriculum</span>
+              </div>
+              <h2 className="heading-section text-3xl sm:text-4xl text-[#123C2C]">
                 Sustainable Scaling Program
               </h2>
-              <p className="text-sm text-zinc-500 max-w-2xl mx-auto">
+              <p className="text-lead text-[#68736C] max-w-2xl mx-auto">
                 A comprehensive 8-module journey from startup sustainability audit to a full investor-ready scaling strategy.
               </p>
             </div>
@@ -159,36 +159,33 @@ export default function App() {
           <CourseModules />
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-zinc-200" />
-
-        {/* 4. Curated Chairs Collection */}
+        {/* 5. Curated Chairs Collection */}
         <ChairCatalog
           chairs={CHAIRS}
           onQuickView={(chair) => setQuickViewChair(chair)}
           onAddToCart={handleAddToCart}
         />
 
-        {/* 5. Interactive Studio Configurator */}
+        {/* 6. Interactive Studio Configurator */}
         <ChairConfigurator
           chairs={CHAIRS}
           onAddToCartCustom={handleAddToCartCustom}
         />
 
-        {/* 6. Engineering & Craftsmanship Deep Dive */}
+        {/* 7. Engineering & Craftsmanship Deep Dive */}
         <CraftsmanshipSection />
 
-        {/* 7. Side-by-Side Model Comparison Matrix */}
+        {/* 8. Side-by-Side Model Comparison Matrix */}
         <ComparisonMatrix
           chairs={CHAIRS}
           onSelectChair={(chair) => setQuickViewChair(chair)}
         />
 
-        {/* 8. Attributable Reviews & Verified Feedback */}
+        {/* 9. Attributable Reviews & Verified Feedback */}
         <ReviewsSection />
       </main>
 
-      {/* 9. Architectural Footer */}
+      {/* 10. Architectural Footer */}
       <Footer />
 
       {/* Slide-Over Cart Drawer */}
@@ -234,10 +231,10 @@ export default function App() {
         onOrderCompleted={handleOrderCompleted}
       />
 
-      {/* Subtle Toast Notification */}
+      {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-zinc-950 text-white text-xs px-4 py-3 rounded-xl shadow-xl flex items-center gap-2.5 border border-zinc-800 animate-in fade-in slide-in-from-bottom-2 duration-200">
-          <div className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+        <div className="fixed bottom-6 right-6 z-50 bg-[#123C2C] text-white text-xs px-4 py-3 rounded-xl shadow-xl flex items-center gap-2.5 border border-emerald-800 animate-in fade-in slide-in-from-bottom-2 duration-200">
+          <div className="w-4 h-4 rounded-full bg-[#218653] text-white flex items-center justify-center">
             <Check className="w-3 h-3" />
           </div>
           <span>{toastMessage}</span>
